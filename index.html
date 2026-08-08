@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velora Estates — Curated Homes & Luxury Properties</title>
+  <meta name="description" content="Discover carefully selected homes, luxury residences, and investment properties with Velora Estates. Where architectural craftsmanship meets elevated living.">
+  <meta name="keywords" content="luxury real estate, luxury villas Kolkata, penthouses Mumbai, luxury properties India, Velora Estates">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Velora Estates — Curated Homes & Luxury Properties">
+  <meta property="og:description" content="Explore luxury residences, villas, and penthouses across Kolkata, Mumbai, Bengaluru, Delhi NCR, and Goa.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/property.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Velora Estates Home">
+        <span class="brand-name">VELORA</span>
+        <span class="brand-tag">Estates • Curated Homes</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#properties" class="nav-link">Properties</a></li>
+          <li><a href="#locations" class="nav-link">Locations</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#advisors" class="nav-link">Advisors</a></li>
+          <li><a href="#calculator" class="nav-link">Financing</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#sell" class="btn btn-outline">Sell With Us</a>
+        <a href="#contact" class="btn btn-accent">Contact</a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-menu-drawer">
+    <div class="mobile-drawer-header">
+      <span class="brand-name">VELORA</span>
+      <button class="modal-close-btn" id="mobile-menu-close" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#advisors">Advisors</a></li>
+      <li><a href="#calculator">Financing</a></li>
+      <li><a href="#sell">Sell With Us</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#sell" class="btn btn-accent btn-full">Request Valuation</a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH INTEGRATED SEARCH
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <span class="section-label">CURATED RESIDENTIAL REAL ESTATE</span>
+          <h1 class="hero-headline">
+            FIND A PLACE<br>
+            <span>WORTH CALLING</span><br>
+            YOURS.
+          </h1>
+          <p class="hero-description">
+            Curated homes, considered spaces, and properties that feel like they belong to you across India's most sought-after addresses.
+          </p>
+          <div class="hero-ctas">
+            <a href="#properties" class="btn btn-primary">Explore Properties →</a>
+            <a href="#sell" class="btn btn-outline">Sell Your Property</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll">
+          <div class="hero-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="Luxury Villa Architecture - Velora Estates" class="hero-img">
+          </div>
+          <div class="hero-badge-float">
+            <strong>100% Curated</strong>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Hand-selected properties across Kolkata, Mumbai, Bengaluru, & Goa.</p>
+          </div>
+        </div>
+
+        <!-- Integrated Hero Search Interface -->
+        <div class="hero-search-box reveal-on-scroll">
+          <div class="hero-search-grid">
+            <div class="search-field">
+              <label for="hero-filter-location">Desired Location</label>
+              <select id="hero-filter-location">
+                <option value="all">All Prime Cities</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="bengaluru">Bengaluru</option>
+                <option value="delhi ncr">Delhi NCR</option>
+                <option value="goa">Goa</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="hero-filter-type">Property Type</label>
+              <select id="hero-filter-type">
+                <option value="all">All Residence Types</option>
+                <option value="apartment">Luxury Apartment</option>
+                <option value="villa">Private Villa</option>
+                <option value="penthouse">Penthouse</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="hero-filter-price">Max Budget</label>
+              <select id="hero-filter-price">
+                <option value="15">Any Price Range</option>
+                <option value="3">Up to ₹3.0 Cr</option>
+                <option value="6">Up to ₹6.0 Cr</option>
+                <option value="10">Up to ₹10.0 Cr</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <button class="btn btn-accent" id="hero-search-btn" style="height:48px;">Search Properties →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROPERTIES & DISCOVERY ENGINE
+       ========================================================================== -->
+  <section class="section-padding" id="properties">
+    <div class="container">
+      <div class="section-header-flex reveal-on-scroll">
+        <div>
+          <span class="section-label">SELECTED RESIDENCES</span>
+          <h2>Exceptional Properties, Carefully Chosen.</h2>
+          <p class="subheading">Selected for how they live—not simply how they look.</p>
+        </div>
+      </div>
+
+      <!-- Real-time Filter Bar -->
+      <div class="filter-bar reveal-on-scroll">
+        <div class="filter-bar-grid">
+          <div class="search-field">
+            <label for="filter-location">City Location</label>
+            <select id="filter-location">
+              <option value="all">All Locations</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="bengaluru">Bengaluru</option>
+              <option value="delhi ncr">Delhi NCR</option>
+              <option value="goa">Goa</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filter-type">Residence Type</label>
+            <select id="filter-type">
+              <option value="all">All Types</option>
+              <option value="apartment">Apartment</option>
+              <option value="villa">Villa</option>
+              <option value="penthouse">Penthouse</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filter-bedrooms">Min Bedrooms</label>
+            <select id="filter-bedrooms">
+              <option value="any">Any Bedrooms</option>
+              <option value="3">3+ Bedrooms</option>
+              <option value="4">4+ Bedrooms</option>
+              <option value="5">5+ Bedrooms</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filter-status">Listing Status</label>
+            <select id="filter-status">
+              <option value="all">All Statuses</option>
+              <option value="for-sale">For Sale</option>
+              <option value="featured">Featured</option>
+              <option value="signature">Signature</option>
+              <option value="new-listing">New Listing</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <label for="filter-max-price" style="margin-bottom:0;">Max Price</label>
+              <span id="price-value-display" style="font-size:0.8rem; font-weight:700; color:var(--color-accent);">₹15 Cr+</span>
+            </div>
+            <input type="range" id="filter-max-price" min="1" max="15" step="0.5" value="15" class="calc-range-slider">
+          </div>
+
+          <div class="search-field">
+            <button class="btn btn-outline" id="clear-filters-btn" style="height:48px;">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Meta & Sort Bar -->
+      <div class="results-meta-bar reveal-on-scroll">
+        <span class="property-count" id="property-count-display">12 Residences Found</span>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <label for="property-sort-select" style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Sort By:</label>
+          <select id="property-sort-select" style="padding:8px 16px; border:1px solid var(--border-color); background:#FFF; border-radius:var(--radius-sm); font-size:0.88rem;">
+            <option value="recommended">Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="area-large">Largest Area</option>
+            <option value="newest">Newest Residences</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Asymmetric Editorial Properties Grid -->
+      <div class="properties-grid" id="properties-grid">
+        <!-- Rendered dynamically by js/property.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="properties-empty-state">
+        <h3>No Residences Found</h3>
+        <p style="color:var(--text-muted); margin-bottom:24px;">No properties matched your current filter criteria. Try adjusting your budget or locations.</p>
+        <button class="btn btn-primary" onclick="resetFilters()">Reset All Filters →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SIGNATURE PROPERTY SHOWCASE
+       ========================================================================== -->
+  <section class="signature-section" id="signature">
+    <div class="container">
+      <div class="signature-grid">
+        <div class="signature-visual reveal-on-scroll">
+          <div class="signature-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="The Aurelia House Alipore Kolkata" class="signature-img">
+          </div>
+        </div>
+
+        <div class="signature-content reveal-on-scroll">
+          <span class="section-label" style="color:var(--color-accent);">VELORA SIGNATURE ESTATE</span>
+          <h2>THE AURELIA HOUSE</h2>
+          <p style="font-size:0.9rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-accent); margin-bottom:8px;">Alipore, Kolkata</p>
+          <div class="signature-price">₹8.75 Cr</div>
+          <p class="signature-desc">
+            "A private contemporary residence designed around light, landscape, and generous living spaces. Features an internal glass courtyard, 50ft lap pool, and temperature-controlled wine cellar."
+          </p>
+
+          <div class="signature-specs-row">
+            <div>
+              <span class="sig-spec-val">5</span>
+              <span class="sig-spec-lbl">Bedrooms</span>
+            </div>
+            <div>
+              <span class="sig-spec-val">6</span>
+              <span class="sig-spec-lbl">Bathrooms</span>
+            </div>
+            <div>
+              <span class="sig-spec-val">5,800</span>
+              <span class="sig-spec-lbl">Sq.Ft.</span>
+            </div>
+            <div>
+              <span class="sig-spec-val">Private Pool</span>
+              <span class="sig-spec-lbl">Amenity</span>
+            </div>
+          </div>
+
+          <button class="btn btn-accent" onclick="openPropertyModal('prop-02')">Explore The Aurelia House →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPLORE BY LOCATION
+       ========================================================================== -->
+  <section class="section-padding" id="locations">
+    <div class="container">
+      <div class="section-header-flex reveal-on-scroll">
+        <div>
+          <span class="section-label">DESIRABLE ADDRESSES</span>
+          <h2>Explore By Location</h2>
+          <p class="subheading">Discover luxury residences across India's most coveted enclaves.</p>
+        </div>
+      </div>
+
+      <div class="location-grid reveal-on-scroll">
+        <!-- Kolkata -->
+        <div class="location-card" onclick="document.getElementById('filter-location').value='kolkata'; applyFilters(); document.getElementById('properties').scrollIntoView({behavior:'smooth'});">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Kolkata Real Estate" class="location-img">
+          <div class="location-overlay">
+            <h3 class="location-name">Kolkata</h3>
+            <span class="location-count">5 Residences</span>
+          </div>
+        </div>
+
+        <!-- Mumbai -->
+        <div class="location-card" onclick="document.getElementById('filter-location').value='mumbai'; applyFilters(); document.getElementById('properties').scrollIntoView({behavior:'smooth'});">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" alt="Mumbai Luxury Real Estate" class="location-img">
+          <div class="location-overlay">
+            <h3 class="location-name">Mumbai</h3>
+            <span class="location-count">2 Penthouses</span>
+          </div>
+        </div>
+
+        <!-- Bengaluru -->
+        <div class="location-card" onclick="document.getElementById('filter-location').value='bengaluru'; applyFilters(); document.getElementById('properties').scrollIntoView({behavior:'smooth'});">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Bengaluru Modern Villas" class="location-img">
+          <div class="location-overlay">
+            <h3 class="location-name">Bengaluru</h3>
+            <span class="location-count">2 Villas</span>
+          </div>
+        </div>
+
+        <!-- Delhi NCR -->
+        <div class="location-card" onclick="document.getElementById('filter-location').value='delhi ncr'; applyFilters(); document.getElementById('properties').scrollIntoView({behavior:'smooth'});">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop" alt="Gurugram Delhi NCR" class="location-img">
+          <div class="location-overlay">
+            <h3 class="location-name">Delhi NCR</h3>
+            <span class="location-count">1 Condominium</span>
+          </div>
+        </div>
+
+        <!-- Goa -->
+        <div class="location-card" onclick="document.getElementById('filter-location').value='goa'; applyFilters(); document.getElementById('properties').scrollIntoView({behavior:'smooth'});">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop" alt="Goa Oceanfront Villas" class="location-img">
+          <div class="location-overlay">
+            <h3 class="location-name">Goa</h3>
+            <span class="location-count">2 Ocean Estates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHY VELORA (4 PRINCIPLES)
+       ========================================================================== -->
+  <section class="section-padding" id="about" style="background-color:var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal-on-scroll">
+        <span class="section-label">OUR GUIDING PRINCIPLES</span>
+        <h2>More Than A Property Search.</h2>
+        <p class="subheading">We approach high-end real estate as advisors, curators, and architects of seamless living.</p>
+      </div>
+
+      <div class="principles-grid reveal-on-scroll">
+        <div class="principle-card">
+          <span class="principle-num">01</span>
+          <h3 class="principle-title">CURATED</h3>
+          <p class="principle-desc">Every property in our portfolio is rigorously selected for quality, location, architectural integrity, and long-term value.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-num">02</span>
+          <h3 class="principle-title">PERSONAL</h3>
+          <p class="principle-desc">Guidance shaped around your specific family priorities, private lifestyle, and investment ambitions.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-num">03</span>
+          <h3 class="principle-title">TRANSPARENT</h3>
+          <p class="principle-desc">Clear information, thorough title verification, and thoughtful advice from initial discovery to final closing.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-num">04</span>
+          <h3 class="principle-title">LOCAL</h3>
+          <p class="principle-desc">Deep market intelligence and discreet access to off-market residences in premier locations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MORTGAGE CALCULATOR
+       ========================================================================== -->
+  <section class="section-padding calc-section" id="calculator">
+    <div class="container">
+      <div class="reveal-on-scroll" style="margin-bottom:48px;">
+        <span class="section-label">FINANCING & VALUATION TOOL</span>
+        <h2>Make The Numbers Make Sense.</h2>
+        <p class="subheading">Estimate your monthly mortgage payments with our interactive fixed-rate calculator.</p>
+      </div>
+
+      <div class="calc-box reveal-on-scroll">
+        <div class="calc-inputs">
+          <!-- Property Price -->
+          <div class="calc-group">
+            <div class="calc-group-header">
+              <label for="calc-price">Property Price (INR)</label>
+              <span class="calc-val-badge" id="calc-price-val">₹3.85 Cr</span>
+            </div>
+            <input type="range" id="calc-price" min="5000000" max="200000000" step="500000" value="38500000" class="calc-range-slider">
+          </div>
+
+          <!-- Down Payment % -->
+          <div class="calc-group">
+            <div class="calc-group-header">
+              <label for="calc-down">Down Payment (%)</label>
+              <span class="calc-val-badge" id="calc-down-val">20% (₹77.00 Lakh)</span>
+            </div>
+            <input type="range" id="calc-down" min="10" max="50" step="5" value="20" class="calc-range-slider">
+          </div>
+
+          <!-- Interest Rate % -->
+          <div class="calc-group">
+            <div class="calc-group-header">
+              <label for="calc-rate">Interest Rate (Annual %)</label>
+              <span class="calc-val-badge" id="calc-rate-val">8.5%</span>
+            </div>
+            <input type="range" id="calc-rate" min="5" max="15" step="0.1" value="8.5" class="calc-range-slider">
+          </div>
+
+          <!-- Loan Term -->
+          <div class="calc-group">
+            <div class="calc-group-header">
+              <label for="calc-term">Loan Tenure (Years)</label>
+              <span class="calc-val-badge" id="calc-term-val">20 Years</span>
+            </div>
+            <input type="range" id="calc-term" min="5" max="30" step="1" value="20" class="calc-range-slider">
+          </div>
+        </div>
+
+        <!-- Results Display Card -->
+        <div class="calc-results-box">
+          <div>
+            <div class="calc-res-hero">
+              <span class="calc-res-label">Estimated Monthly EMI</span>
+              <div class="calc-res-val-lg" id="res-monthly-emi">₹2,67,112</div>
+            </div>
+
+            <div class="calc-res-grid">
+              <div>
+                <span class="calc-res-label">Principal Loan Amount</span>
+                <span style="font-size:1.3rem; font-family:var(--font-display); color:var(--text-light);" id="res-loan-amount">₹3,08,00,000</span>
+              </div>
+              <div>
+                <span class="calc-res-label">Total Interest Payable</span>
+                <span style="font-size:1.3rem; font-family:var(--font-display); color:var(--text-light);" id="res-total-interest">₹3,33,06,880</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="calc-disclaimer">*Illustrative estimate only based on standard fixed-rate formula. Actual financing terms may vary per financial institution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ADVISORS SECTION
+       ========================================================================== -->
+  <section class="section-padding" id="advisors">
+    <div class="container">
+      <div class="section-header-flex reveal-on-scroll">
+        <div>
+          <span class="section-label">PRIVATE PROPERTY ADVISORS</span>
+          <h2>Meet Our Specialists.</h2>
+          <p class="subheading">Dedicated guidance shaped around your discrete requirements.</p>
+        </div>
+      </div>
+
+      <div class="advisors-grid reveal-on-scroll">
+        <!-- Advisor 1 -->
+        <div class="advisor-card">
+          <div class="advisor-img-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Ananya Kapoor Velora Advisor" class="advisor-img">
+          </div>
+          <div class="advisor-body">
+            <h3 class="advisor-name">Ananya Kapoor</h3>
+            <div class="advisor-role">Luxury Residential Specialist</div>
+            <span class="advisor-exp">8+ Years Experience</span>
+            <p class="advisor-bio">Ananya specializes in high-net-worth acquisitions across Kolkata & Mumbai's prime residential enclaves.</p>
+            <a href="#contact" class="btn btn-outline btn-full">Contact Advisor →</a>
+          </div>
+        </div>
+
+        <!-- Advisor 2 -->
+        <div class="advisor-card">
+          <div class="advisor-img-box">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="Rohan Mehta Velora Advisor" class="advisor-img">
+          </div>
+          <div class="advisor-body">
+            <h3 class="advisor-name">Rohan Mehta</h3>
+            <div class="advisor-role">Property Advisor & Valuer</div>
+            <span class="advisor-exp">6+ Years Experience</span>
+            <p class="advisor-bio">Rohan brings a data-driven approach to luxury villa investments in Bengaluru and Goa coastal regions.</p>
+            <a href="#contact" class="btn btn-outline btn-full">Contact Advisor →</a>
+          </div>
+        </div>
+
+        <!-- Advisor 3 -->
+        <div class="advisor-card">
+          <div class="advisor-img-box">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" alt="Ishita Sen Velora Advisor" class="advisor-img">
+          </div>
+          <div class="advisor-body">
+            <h3 class="advisor-name">Ishita Sen</h3>
+            <div class="advisor-role">Senior Investment Consultant</div>
+            <span class="advisor-exp">10+ Years Experience</span>
+            <p class="advisor-bio">Ishita advises NRIs and institutional family offices on trophy penthouse and oceanfront estate portfolios.</p>
+            <a href="#contact" class="btn btn-outline btn-full">Contact Advisor →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SELL WITH VELORA
+       ========================================================================== -->
+  <section class="section-padding seller-section" id="sell">
+    <div class="container">
+      <div class="seller-grid">
+        <div class="reveal-on-scroll">
+          <span class="section-label" style="color:var(--color-accent);">SELL YOUR PROPERTY</span>
+          <h2 style="color:var(--text-light); font-size:clamp(2.5rem, 4vw, 3.8rem);">HAVE A PROPERTY WORTH SHOWING?</h2>
+          <p style="color:#B5B0A6; font-size:1.1rem; margin-top:16px; margin-bottom:32px;">
+            Get a considered valuation and connect with one of our senior property specialists for discreet, targeted marketing.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:16px; color:#DCD6CA; font-size:0.95rem;">
+            <div>✓ Confidential valuation & market position evaluation</div>
+            <div>✓ Professional architectural photography & editorial presentation</div>
+            <div>✓ Direct access to verified high-net-worth buyers & investors</div>
+          </div>
+        </div>
+
+        <div class="seller-form-box reveal-on-scroll">
+          <h3 style="color:var(--text-light); margin-bottom:24px;">Request Property Valuation</h3>
+          <form id="valuation-enquiry-form" class="form-grid">
+            <div>
+              <input type="text" name="name" placeholder="Full Name" class="form-control" required>
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email Address" class="form-control" required>
+            </div>
+            <div>
+              <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required>
+            </div>
+            <div>
+              <input type="text" name="location" placeholder="Property Location (e.g. Alipore)" class="form-control" required>
+            </div>
+            <div class="form-full">
+              <select name="type" class="form-control" required>
+                <option value="" disabled selected>Select Property Type</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="apartment">Apartment / Residence</option>
+                <option value="penthouse">Penthouse</option>
+                <option value="land">Prime Plot / Estate</option>
+              </select>
+            </div>
+            <div class="form-full">
+              <textarea name="message" placeholder="Additional details about your property..." rows="3" class="form-control"></textarea>
+            </div>
+            <div class="form-full">
+              <button type="submit" class="btn btn-accent btn-full">Submit Valuation Request →</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TESTIMONIALS
+       ========================================================================== -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="reveal-on-scroll" style="margin-bottom:48px;">
+        <span class="section-label">CLIENT EXPERIENCES</span>
+        <h2>Considered Advice, Enduring Trust.</h2>
+      </div>
+
+      <div class="testimonials-grid reveal-on-scroll">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Velora understood exactly what we were looking for. We never felt pushed toward a property that wasn't right for us."
+          </p>
+          <div>
+            <div class="testimonial-author">— Rhea & Arjun</div>
+            <div class="testimonial-loc">Alipore, Kolkata • Villa Buyers</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Their knowledge of Bandra's off-market penthouse inventory was unmatched. The transaction was completely seamless."
+          </p>
+          <div>
+            <div class="testimonial-author">— Kabir S.</div>
+            <div class="testimonial-loc">Bandra, Mumbai • Penthouse Owner</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "As an NRI investing in Goa from London, Velora provided transparent legal and title guidance every step of the way."
+          </p>
+          <div>
+            <div class="testimonial-author">— Dr. S. Nambiar</div>
+            <div class="testimonial-loc">North Goa • Villa Investor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FINAL CTA
+       ========================================================================== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta-box reveal-on-scroll">
+        <span class="section-label">YOUR NEXT ADDRESS</span>
+        <h2 style="font-size:clamp(2.5rem, 4.5vw, 4rem); margin-bottom:20px;">
+          YOUR NEXT CHAPTER<br>
+          STARTS WITH AN ADDRESS.
+        </h2>
+        <p class="subheading" style="margin:0 auto 36px;">Explore homes selected for the way you want to live.</p>
+        <a href="#properties" class="btn btn-primary">Explore Properties →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name" style="color:var(--text-light);">VELORA</span>
+          <span class="brand-tag">Estates</span>
+          <p>Velora Estates is a premium real-estate brokerage specializing in carefully selected residential properties, luxury homes, and property advisory.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#about">About Velora</a></li>
+            <li><a href="#advisors">Advisors</a></li>
+            <li><a href="#calculator">Financing Tool</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Locations</h4>
+          <ul class="footer-links">
+            <li><a href="#locations">Kolkata</a></li>
+            <li><a href="#locations">Mumbai</a></li>
+            <li><a href="#locations">Bengaluru</a></li>
+            <li><a href="#locations">Delhi NCR</a></li>
+            <li><a href="#locations">Goa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Private Office</h4>
+          <p style="font-size:0.9rem; color:#B5B0A6; margin-bottom:12px;">Alipore, Kolkata, West Bengal, India</p>
+          <p style="font-size:0.9rem; color:#B5B0A6; margin-bottom:12px;">Email: <a href="mailto:hello@veloraestates.demo" style="color:var(--color-accent);">hello@veloraestates.demo</a></p>
+          <p style="font-size:0.9rem; color:#B5B0A6;">Phone: +91 90000 00000</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VELORA ESTATES. All rights reserved.</div>
+        <div style="font-style:italic;">Velora Estates is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROPERTY DETAIL MODAL DIALOG
+       ========================================================================== -->
+  <div class="property-modal" id="property-detail-modal" aria-modal="true" role="dialog">
+    <div class="modal-content-wrapper">
+      <button class="property-modal-close" id="property-modal-close" aria-label="Close modal">✕</button>
+      <div id="property-modal-content">
+        <!-- Rendered dynamically by js/property.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CONFIRMATION MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-overlay" id="confirmation-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="confirmation-modal-close">✕</button>
+      <h3 id="conf-modal-title" style="margin-bottom:16px;">Request Received</h3>
+      <p id="conf-modal-text" style="color:var(--text-secondary); margin-bottom:32px;">Thank you. Our team will contact you shortly.</p>
+      <button class="btn btn-primary" onclick="closeConfirmationModal()">Close Window →</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/properties.js"></script>
+  <script src="js/property.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/mortgage.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

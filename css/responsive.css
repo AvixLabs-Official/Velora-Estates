@@ -1,0 +1,158 @@
+/* ==========================================================================
+   VELORA ESTATES - Responsive Reflow Stylesheet
+   Deliberately tailored for 360px, 375px, 390px, 430px, 768px, 1024px, 1280px, 1920px
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links, .nav-actions .btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-search-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .signature-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .calc-box {
+    grid-template-columns: 1fr;
+    padding: 36px;
+  }
+
+  .seller-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .advisors-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .detail-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .hero-headline {
+    font-size: 2.8rem;
+  }
+
+  .hero-search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .calc-res-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-container {
+    padding: 20px;
+  }
+
+  .detail-quick-specs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-quick-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-form-box {
+    padding: 24px;
+  }
+}

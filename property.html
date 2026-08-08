@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residence Detail — Velora Estates</title>
+  <meta name="description" content="View detailed specs, architectural photography, and floorplans for luxury residences with Velora Estates.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/property.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Velora Estates Home">
+        <span class="brand-name">VELORA</span>
+        <span class="brand-tag">Estates • Curated Homes</span>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#properties" class="nav-link">← Back to All Residences</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#sell" class="btn btn-accent">Request Valuation</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 20px); padding-bottom: 80px;">
+    <div class="container" id="standalone-property-container">
+      <!-- Rendered dynamically via js/property.js based on URL ?id=prop-01 -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 VELORA ESTATES. All rights reserved.</div>
+        <div style="font-style:italic;">Velora Estates is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/properties.js"></script>
+  <script src="js/property.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const propId = urlParams.get('id') || 'prop-01';
+      const container = document.getElementById('standalone-property-container');
+      
+      const prop = PROPERTIES_DATA.find(p => p.id === propId) || PROPERTIES_DATA[0];
+      const agent = ADVISORS_DATA.find(a => a.id === prop.agentId) || ADVISORS_DATA[0];
+      
+      if (container && prop) {
+        document.title = `${prop.name} — Velora Estates`;
+        container.innerHTML = `
+          <div class="detail-container" style="background:#FFF; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
+            <div class="detail-gallery-section">
+              <div class="detail-main-img-box">
+                <img id="detail-active-img" src="${prop.gallery[0] || prop.image}" alt="${prop.name}" class="detail-main-img">
+              </div>
+              <div class="detail-thumbs-strip">
+                ${(prop.gallery || [prop.image]).map((imgUrl, i) => `
+                  <button class="thumb-btn ${i === 0 ? 'active' : ''}" onclick="document.getElementById('detail-active-img').src='${imgUrl}';">
+                    <img src="${imgUrl}" alt="Thumbnail ${i + 1}">
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="detail-info-grid">
+              <div class="detail-main-info">
+                <div class="detail-header-meta">
+                  <span class="card-badge badge-${prop.status.toLowerCase().replace(' ', '-')}">${prop.status}</span>
+                  <span class="detail-type-tag">${prop.type} • ${prop.city}</span>
+                </div>
+                <h1 class="detail-title">${prop.name}</h1>
+                <p class="detail-location-sub">${prop.location}</p>
+                <div class="detail-price-hero">${prop.price}</div>
+
+                <div class="detail-quick-specs">
+                  <div class="quick-spec-item">
+                    <span class="spec-label">Bedrooms</span>
+                    <span class="spec-val">${prop.bedrooms}</span>
+                  </div>
+                  <div class="quick-spec-item">
+                    <span class="spec-label">Bathrooms</span>
+                    <span class="spec-val">${prop.bathrooms}</span>
+                  </div>
+                  <div class="quick-spec-item">
+                    <span class="spec-label">Total Area</span>
+                    <span class="spec-val">${prop.area.toLocaleString('en-IN')} ${prop.areaUnit}</span>
+                  </div>
+                  <div class="quick-spec-item">
+                    <span class="spec-label">Year Built</span>
+                    <span class="spec-val">${prop.yearBuilt}</span>
+                  </div>
+                  <div class="quick-spec-item">
+                    <span class="spec-label">Parking</span>
+                    <span class="spec-val">${prop.parking}</span>
+                  </div>
+                </div>
+
+                <div class="detail-block">
+                  <h3 class="detail-block-heading">About The Residence</h3>
+                  <p class="detail-description">${prop.description}</p>
+                </div>
+
+                <div class="detail-block">
+                  <h3 class="detail-block-heading">Features & Amenities</h3>
+                  <div class="amenities-grid">
+                    ${prop.amenities.map(am => `
+                      <div class="amenity-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>${am}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+
+              <aside class="detail-sidebar">
+                <div class="sidebar-agent-card">
+                  <div class="agent-avatar-box">
+                    <img src="${agent.image}" alt="${agent.name}">
+                  </div>
+                  <div class="agent-meta">
+                    <h4>${agent.name}</h4>
+                    <p>${agent.role}</p>
+                    <span class="agent-exp">${agent.experience}</span>
+                  </div>
+                  <form class="sidebar-enquiry-form" onsubmit="event.preventDefault(); alert('Request Received! ${agent.name} will contact you shortly.');">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea placeholder="I am interested in scheduling a private viewing..." rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary btn-full">Request Private Viewing →</button>
+                  </form>
+                </div>
+              </aside>
+            </div>
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "velora-estates",
+  "version": "1.0.0",
+  "description": "Velora Estates - High-End Luxury Real Estate Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "real-estate",
+    "luxury-properties",
+    "architecture",
+    "portfolio",
+    "freelance"
+  ],
+  "author": "Antigravity Freelance Demo",
+  "license": "MIT"
+}
