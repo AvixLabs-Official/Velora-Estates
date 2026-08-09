@@ -1,51 +1,50 @@
-# Velora Estates — Modern Real Estate Discovery Platform
+# Velora Estates
 
-![Velora Estates](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop)
+Premium real estate discovery platform with property browsing, filtering, details, and interactive tools.
 
-**Velora Estates** is an interactive luxury real estate web application featuring property search filtering, interactive property details, dynamic mortgage calculators, and user shortlist management.
+## Live Demo
 
----
-
-## 🚀 Live Demo
-
-- **Public Live Application**: [https://velora-estates.onrender.com/](https://velora-estates.onrender.com/)
+- **[View Live Demo](https://velora-estates.onrender.com/)**
 - **GitHub Repository**: [https://github.com/AvixLabs-Official/Velora-Estates](https://github.com/AvixLabs-Official/Velora-Estates)
 
----
+## Overview
 
-## ✨ Key Features
+Velora Estates is a luxury real estate discovery web application created for property buyers, real estate agencies, and luxury home listings.
 
-- **Multi-Parametric Property Search**: Filter properties by location, type (Villa, Penthouse, Apartment), price range, and bedrooms.
-- **Interactive Mortgage Calculator**: Real-time monthly payment calculation based on home price, down payment, interest rate, and loan term.
-- **User Shortlist & Favorites**: Save properties to personal shortlist stored via LocalStorage.
-- **Schedule Property Tour Modal**: Interactive booking form to request private property viewings.
+Users can browse listings, apply multi-parameter search filters, calculate estimated monthly mortgage payments, save property shortlists, and schedule private property tours.
 
----
+> **Disclaimer**: This is a portfolio demonstration project and not a client project.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: HTML5, Vanilla CSS3, JavaScript (ES6+)
-- **Backend**: Node.js `server.js` HTTP Server
-- **Deployment**: Render Web Service
+- Multi-parametric search (Location, Property Type, Price Range, Bedrooms)
+- Real-time interactive mortgage payment calculator
+- Property shortlist & favorites manager stored in LocalStorage
+- Property tour schedule request modal
+- High-resolution architectural gallery cards
 
----
+## Technologies
 
-## 💻 Local Installation & Setup
+- HTML5
+- CSS3 (Ivory & Charcoal Palette)
+- JavaScript (ES6+ State & Calculator Engine)
+- Node.js HTTP Server (`server.js`)
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/AvixLabs-Official/Velora-Estates.git
-   cd Velora-Estates
-   ```
+## Screenshots
 
-2. **Start Node Server**:
-   ```bash
-   node server.js
-   ```
-   Open `http://localhost:8083` in your browser.
+![Velora Estates Interface](images/velora_estates_preview.jpg)
 
----
+## Responsive Design
 
-## 📄 License
+Engineered and tested across viewports:
+- Desktop (1440px +)
+- Tablet (768px – 1024px)
+- Mobile (360px – 480px)
 
-Developed by **[Avix / AvixLabs](https://github.com/AvixLabs-Official)**. Released under the MIT License.
+## Project Type
+
+Portfolio Demonstration · Real Estate
+
+## Disclaimer
+
+This project is a portfolio demonstration created to showcase frontend development, UI/UX, and interactive web-development capabilities. It is not presented as client work.
