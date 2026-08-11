@@ -1,19 +1,34 @@
 /* ==========================================================================
-   VELORA ESTATES - Responsive Reflow Stylesheet
-   Deliberately tailored for 360px, 375px, 390px, 430px, 768px, 1024px, 1280px, 1920px
+   VELORA ESTATES - Ultra-Responsive Master Stylesheet
+   Complete Mobile & Responsive Reflow for All Sections
+   Targeting: 1440px, 1200px, 992px, 768px, 600px, 480px, 400px, 350px, 250px
    ========================================================================== */
 
+/* Large Tablets & Small Laptops (993px - 1200px) */
 @media (max-width: 1200px) {
   .properties-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 
   .location-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .principles-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .advisors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .footer-top {
@@ -22,6 +37,7 @@
   }
 }
 
+/* Medium Tablets & Mobile Landscape (769px - 992px) */
 @media (max-width: 992px) {
   .nav-links, .nav-actions .btn {
     display: none;
@@ -33,60 +49,128 @@
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .hero-search-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .hero-badge-float {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .signature-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .calc-box {
     grid-template-columns: 1fr;
-    padding: 36px;
+    padding: 32px 24px;
+    gap: 32px;
   }
 
   .seller-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
-  .advisors-grid, .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .advisors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .detail-info-grid {
     grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sidebar-agent-card {
+    position: static;
   }
 }
 
+/* Small Tablets & Mobile Portrait (481px - 768px) */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
   }
 
   .section-padding {
-    padding: 70px 0;
+    padding: 60px 0 !important;
+  }
+
+  /* Header Bar */
+  .header.scrolled {
+    height: 62px;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  .brand-tag {
+    font-size: 0.55rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 90px 0 40px;
   }
 
   .hero-headline {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  .hero-subheading {
+    font-size: 0.98rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-img-wrapper {
+    aspect-ratio: 16/10;
+  }
+
+  .hero-search-box {
+    padding: 20px 16px;
+    margin-top: 24px;
   }
 
   .hero-search-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .filter-bar-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  /* Residences Found Section Mobile Optimization */
+  /* Residences Found Section */
   .results-meta-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -98,6 +182,7 @@
   .results-sort-wrap {
     width: 100%;
     justify-content: space-between;
+    gap: 8px;
   }
 
   #property-sort-select {
@@ -110,19 +195,91 @@
     gap: 24px;
   }
 
+  /* Signature Estate Section */
+  .signature-section {
+    padding: 60px 0;
+  }
+
+  .signature-img-wrapper {
+    aspect-ratio: 16/10;
+  }
+
+  .signature-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .signature-price {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .signature-specs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .signature-content .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Locations & Principles */
   .location-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .principles-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .form-grid {
+  .principle-card {
+    padding: 20px 16px;
+  }
+
+  /* Calculator Section */
+  .calc-box {
+    padding: 24px 16px;
+  }
+
+  .calc-res-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  /* Sell Your Property & Valuation Section Mobile Optimization */
+  .calc-res-val-lg {
+    font-size: 1.8rem;
+    word-break: break-word;
+  }
+
+  /* Advisors & Testimonials */
+  .advisors-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .advisor-card {
+    border-radius: var(--radius-sm);
+  }
+
+  .advisor-img-box {
+    aspect-ratio: 16/10;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px 16px;
+  }
+
+  /* Sell Your Property Section */
   .seller-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -144,9 +301,15 @@
   }
 
   .seller-form-box {
-    padding: 28px 20px;
+    padding: 24px 18px;
   }
 
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Footer */
   .footer-top {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -158,46 +321,66 @@
     text-align: center;
   }
 
-  .calc-res-grid {
-    grid-template-columns: 1fr;
+  /* Property Detail Modal & Dedicated Page */
+  .property-modal {
+    padding: 16px 10px;
   }
 
   .detail-container {
-    padding: 20px;
+    padding: 24px 16px;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+  }
+
+  .detail-price-hero {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
   }
 
   .detail-quick-specs {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-headline {
-    font-size: 2.2rem;
-  }
-
-  .hero-ctas {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-ctas .btn {
-    width: 100%;
-  }
-
-  .location-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .detail-quick-specs {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 18px 14px;
   }
 
   .amenities-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  /* Residences Found Extra-Small Mobile Optimization */
+  .sidebar-agent-card {
+    padding: 24px 16px;
+  }
+}
+
+/* Phones & Small Screens (401px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding: 48px 0 !important;
+  }
+
+  /* Header & Navigation */
+  .header.scrolled {
+    height: 58px;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Property Card */
   .card-body {
     padding: 20px 16px;
   }
@@ -211,17 +394,35 @@
     margin-bottom: 12px;
   }
 
-  .property-count {
+  .card-specs {
+    flex-wrap: wrap;
+    gap: 6px 10px;
     font-size: 0.8rem;
   }
 
-  /* Sell & Valuation Extra-Small Mobile Optimization */
+  /* Signature & Calculator */
+  .signature-specs-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .calc-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .calc-val-badge {
+    align-self: flex-start;
+  }
+
+  /* Sell & Valuation Form */
   .seller-headline {
     font-size: 1.7rem;
   }
 
   .seller-form-box {
-    padding: 20px 16px;
+    padding: 20px 14px;
     border-radius: var(--radius-sm);
   }
 
@@ -242,13 +443,26 @@
     font-size: 0.88rem;
     justify-content: center;
   }
+
+  /* Property Detail Specs */
+  .detail-quick-specs {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 
-/* ==========================================================================
-   ULTRA-SMALL MOBILE SCREENS (320px - 400px)
-   ========================================================================== */
+/* Extra Small Screens (351px - 400px) */
 @media (max-width: 400px) {
-  /* 1. Residences Found Section Ultra-Small Optimization */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Hero Section */
+  .hero-headline {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
   .hero-search-box, .filter-bar {
     padding: 16px 12px !important;
   }
@@ -340,7 +554,7 @@
     height: 16px !important;
   }
 
-  /* 2. Sell Your Property Section Ultra-Small Optimization */
+  /* Sell & Valuation Section */
   .seller-section {
     padding: 40px 0 !important;
   }
@@ -375,7 +589,6 @@
     font-size: 0.85rem !important;
   }
 
-  /* 3. Request Property Valuation Section Ultra-Small Optimization */
   .seller-form-box {
     padding: 16px 12px !important;
     border-radius: var(--radius-sm) !important;
@@ -425,14 +638,33 @@
    ========================================================================== */
 @media (max-width: 350px) {
   .container {
-    padding: 0 10px !important;
+    padding: 0 8px !important;
   }
 
   .section-padding {
-    padding: 36px 0 !important;
+    padding: 32px 0 !important;
   }
 
-  /* 1. Residences Found Micro-Mobile Optimization */
+  /* Header & Navigation */
+  .brand-name {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .brand-tag {
+    font-size: 0.48rem !important;
+  }
+
+  .hero-headline {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subheading {
+    font-size: 0.88rem !important;
+  }
+
+  /* Residences Found Section */
   .hero-search-box, .filter-bar {
     padding: 12px 8px !important;
   }
@@ -528,24 +760,58 @@
     padding: 4px 0 !important;
   }
 
-  /* 2. Sell Your Property Micro-Mobile Optimization */
+  /* Signature & Location Section */
+  .signature-content h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .signature-price {
+    font-size: 1.4rem !important;
+  }
+
+  .sig-spec-val {
+    font-size: 0.95rem !important;
+  }
+
+  .sig-spec-lbl {
+    font-size: 0.65rem !important;
+  }
+
+  .location-name {
+    font-size: 1.1rem !important;
+  }
+
+  .location-count {
+    font-size: 0.72rem !important;
+  }
+
+  /* Principles & Calculator */
+  .principle-title {
+    font-size: 1rem !important;
+  }
+
+  .calc-res-val-lg {
+    font-size: 1.4rem !important;
+  }
+
+  /* Sell Your Property Section */
   .seller-section {
-    padding: 32px 0 !important;
+    padding: 28px 0 !important;
   }
 
   .seller-grid {
-    gap: 16px !important;
+    gap: 14px !important;
   }
 
   .seller-headline {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
     line-height: 1.2 !important;
     word-break: break-word !important;
     letter-spacing: 0 !important;
   }
 
   .seller-subpara {
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
     margin-top: 6px !important;
     margin-bottom: 12px !important;
     line-height: 1.4 !important;
@@ -553,7 +819,7 @@
 
   .seller-bullets-wrap {
     gap: 8px !important;
-    font-size: 0.78rem !important;
+    font-size: 0.76rem !important;
   }
 
   .seller-bullet-item {
@@ -562,10 +828,10 @@
   }
 
   .bullet-check {
-    font-size: 0.78rem !important;
+    font-size: 0.76rem !important;
   }
 
-  /* 3. Request Property Valuation Micro-Mobile Optimization */
+  /* Request Property Valuation Section */
   .seller-form-box {
     padding: 12px 8px !important;
     border-radius: 4px !important;
@@ -574,7 +840,7 @@
   }
 
   .seller-form-box h3 {
-    font-size: 1.05rem !important;
+    font-size: 1.02rem !important;
     margin-bottom: 10px !important;
     text-align: left !important;
     letter-spacing: 0 !important;
@@ -612,5 +878,34 @@
     text-align: center !important;
     line-height: 1.25 !important;
     word-break: break-word !important;
+  }
+
+  /* Detail Modal Ultra-Small Reflow */
+  .property-modal {
+    padding: 6px 4px !important;
+  }
+
+  .detail-container {
+    padding: 12px 8px !important;
+  }
+
+  .detail-title {
+    font-size: 1.3rem !important;
+  }
+
+  .detail-price-hero {
+    font-size: 1.4rem !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .detail-quick-specs {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 12px 8px !important;
+  }
+
+  .sidebar-agent-card {
+    padding: 14px 10px !important;
   }
 }
