@@ -558,6 +558,55 @@ option {
   border-bottom: 1px solid var(--border-color);
 }
 
+.results-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.results-sort-wrap label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.seller-headline {
+  color: var(--text-light);
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.15;
+}
+
+.seller-subpara {
+  color: #B5B0A6;
+  font-size: 1.05rem;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.seller-bullets-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #DCD6CA;
+  font-size: 0.95rem;
+}
+
+.seller-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.bullet-check {
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 .property-count {
   font-size: 0.9rem;
   font-weight: 600;

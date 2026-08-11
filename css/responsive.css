@@ -86,8 +86,28 @@
     grid-template-columns: 1fr;
   }
 
+  /* Residences Found Section Mobile Optimization */
+  .results-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+
+  .results-sort-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #property-sort-select {
+    flex: 1;
+    min-width: 0;
+  }
+
   .properties-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .location-grid {
@@ -100,6 +120,31 @@
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Sell Your Property & Valuation Section Mobile Optimization */
+  .seller-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .seller-headline {
+    font-size: 2.1rem;
+  }
+
+  .seller-subpara {
+    font-size: 0.98rem;
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+
+  .seller-bullets-wrap {
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+
+  .seller-form-box {
+    padding: 28px 20px;
   }
 
   .footer-top {
@@ -152,7 +197,49 @@
     grid-template-columns: 1fr;
   }
 
+  /* Residences Found Extra-Small Mobile Optimization */
+  .card-body {
+    padding: 20px 16px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-price {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+
+  .property-count {
+    font-size: 0.8rem;
+  }
+
+  /* Sell & Valuation Extra-Small Mobile Optimization */
+  .seller-headline {
+    font-size: 1.7rem;
+  }
+
   .seller-form-box {
-    padding: 24px;
+    padding: 20px 16px;
+    border-radius: var(--radius-sm);
+  }
+
+  .seller-form-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .seller-form-box .form-control {
+    font-size: 16px !important;
+    padding: 12px 14px;
+    min-height: 48px;
+  }
+
+  .seller-form-box .btn-full {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    justify-content: center;
   }
 }

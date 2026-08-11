@@ -221,8 +221,8 @@
       <!-- Results Meta & Sort Bar -->
       <div class="results-meta-bar reveal-on-scroll">
         <span class="property-count" id="property-count-display">12 Residences Found</span>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <label for="property-sort-select" style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Sort By:</label>
+        <div class="results-sort-wrap">
+          <label for="property-sort-select">Sort By:</label>
           <select id="property-sort-select">
             <option value="recommended">Recommended</option>
             <option value="price-low">Price: Low to High</option>
@@ -537,14 +537,14 @@
       <div class="seller-grid">
         <div class="reveal-on-scroll">
           <span class="section-label" style="color:var(--color-accent);">SELL YOUR PROPERTY</span>
-          <h2 style="color:var(--text-light); font-size:clamp(2.5rem, 4vw, 3.8rem);">HAVE A PROPERTY WORTH SHOWING?</h2>
-          <p style="color:#B5B0A6; font-size:1.1rem; margin-top:16px; margin-bottom:32px;">
+          <h2 class="seller-headline">HAVE A PROPERTY WORTH SHOWING?</h2>
+          <p class="seller-subpara">
             Get a considered valuation and connect with one of our senior property specialists for discreet, targeted marketing.
           </p>
-          <div style="display:flex; flex-direction:column; gap:16px; color:#DCD6CA; font-size:0.95rem;">
-            <div>✓ Confidential valuation & market position evaluation</div>
-            <div>✓ Professional architectural photography & editorial presentation</div>
-            <div>✓ Direct access to verified high-net-worth buyers & investors</div>
+          <div class="seller-bullets-wrap">
+            <div class="seller-bullet-item"><span class="bullet-check">✓</span> <span>Confidential valuation & market position evaluation</span></div>
+            <div class="seller-bullet-item"><span class="bullet-check">✓</span> <span>Professional architectural photography & editorial presentation</span></div>
+            <div class="seller-bullet-item"><span class="bullet-check">✓</span> <span>Direct access to verified high-net-worth buyers & investors</span></div>
           </div>
         </div>
 
