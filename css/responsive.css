@@ -3,6 +3,16 @@
    Strict Design System Alignment Across All Breakpoints (1920px -> 250px)
    ========================================================================== */
 
+/* Global Zero Overflow Lock */
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 /* Large Tablets & Small Laptops (993px - 1200px) */
 @media (max-width: 1200px) {
   :root {
@@ -11,6 +21,7 @@
 
   .container {
     padding: 0 28px;
+    max-width: 100%;
   }
 
   .properties-grid {
@@ -52,6 +63,7 @@
 
   .container {
     padding: 0 24px;
+    max-width: 100%;
   }
 
   .nav-links, .nav-actions .btn {
@@ -127,7 +139,10 @@
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .section-padding {
@@ -189,11 +204,14 @@
 
   .hero-img-wrapper {
     aspect-ratio: 16/10;
+    width: 100%;
   }
 
   .hero-search-box {
     padding: 20px 16px;
     margin-top: 24px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-search-grid {
@@ -204,6 +222,8 @@
   .filter-bar {
     padding: 20px 16px;
     margin-bottom: 28px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .filter-bar-grid {
@@ -218,6 +238,8 @@
     gap: 12px;
     margin-bottom: 24px;
     padding-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .results-sort-wrap {
@@ -232,8 +254,34 @@
   }
 
   .properties-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 24px;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .property-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .card-meta-top {
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
+    font-size: 0.72rem !important;
+    width: 100% !important;
+  }
+
+  .card-specs {
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
+    font-size: 0.8rem !important;
+    width: 100% !important;
+  }
+
+  .spec-divider {
+    display: none !important;
   }
 
   /* Signature Estate Section */
@@ -243,6 +291,7 @@
 
   .signature-img-wrapper {
     aspect-ratio: 16/10;
+    width: 100%;
   }
 
   .signature-content h2 {
@@ -294,6 +343,8 @@
   .calc-box {
     padding: 24px 16px;
     gap: 28px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .calc-res-grid {
@@ -314,6 +365,7 @@
 
   .advisor-card {
     border-radius: var(--radius-sm);
+    width: 100%;
   }
 
   .advisor-img-box {
@@ -380,7 +432,7 @@
   }
 
   .seller-form-box .form-control {
-    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    font-size: 16px !important;
     padding: 12px 14px !important;
     min-height: 48px !important;
     width: 100% !important;
@@ -464,7 +516,9 @@
 /* Phones & Small Screens (401px - 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .section-padding {
@@ -565,7 +619,9 @@
 /* Extra Small Screens (351px - 400px) */
 @media (max-width: 400px) {
   .container {
-    padding: 0 12px;
+    padding: 0 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* Hero Section */
@@ -741,6 +797,8 @@
 @media (max-width: 350px) {
   .container {
     padding: 0 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .section-padding {

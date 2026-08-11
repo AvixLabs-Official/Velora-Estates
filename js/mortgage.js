@@ -1,6 +1,6 @@
 /**
  * VELORA ESTATES - Interactive Mortgage & Financing Calculator
- * Standard Fixed-Rate Amortization Formula with Indian Currency Format
+ * Standard Fixed-Rate Amortization Formula with USD ($) Currency Formatting
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,9 +42,9 @@ function initMortgageCalculator() {
     const totalPayment = emi * totalMonths;
     const totalInterest = totalPayment - loanAmount;
 
-    // Display formatted values
-    if (priceVal) priceVal.textContent = formatINR(price);
-    if (downVal) downVal.textContent = `${downPct}% (${formatINR(downAmount)})`;
+    // Display formatted values in USD ($)
+    if (priceVal) priceVal.textContent = formatUSD(price);
+    if (downVal) downVal.textContent = `${downPct}% (${formatUSD(downAmount)})`;
     if (rateVal) rateVal.textContent = `${annualRate.toFixed(1)}%`;
     if (termVal) termVal.textContent = `${termYears} Years`;
 
@@ -53,10 +53,10 @@ function initMortgageCalculator() {
     const totalInterestEl = document.getElementById('res-total-interest');
     const totalPaymentEl = document.getElementById('res-total-payment');
 
-    if (loanAmountEl) loanAmountEl.textContent = formatINR(loanAmount);
-    if (monthlyEmiEl) monthlyEmiEl.textContent = formatINR(Math.round(emi));
-    if (totalInterestEl) totalInterestEl.textContent = formatINR(Math.round(totalInterest));
-    if (totalPaymentEl) totalPaymentEl.textContent = formatINR(Math.round(totalPayment));
+    if (loanAmountEl) loanAmountEl.textContent = formatUSD(loanAmount);
+    if (monthlyEmiEl) monthlyEmiEl.textContent = formatUSD(Math.round(emi));
+    if (totalInterestEl) totalInterestEl.textContent = formatUSD(Math.round(totalInterest));
+    if (totalPaymentEl) totalPaymentEl.textContent = formatUSD(Math.round(totalPayment));
   }
 
   [priceInput, downInput, rateInput, termInput].forEach(inp => {
@@ -67,16 +67,7 @@ function initMortgageCalculator() {
   calculate();
 }
 
-function formatINR(amount) {
-  if (isNaN(amount)) return "₹0";
-
-  if (amount >= 10000000) {
-    const cr = (amount / 10000000).toFixed(2);
-    return `₹${cr} Cr`;
-  } else if (amount >= 100000) {
-    const lakh = (amount / 100000).toFixed(2);
-    return `₹${lakh} Lakh`;
-  }
-
-  return '₹' + Math.round(amount).toLocaleString('en-IN');
+function formatUSD(amount) {
+  if (isNaN(amount)) return "$0";
+  return '$' + Math.round(amount).toLocaleString('en-US');
 }

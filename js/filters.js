@@ -1,6 +1,6 @@
 /**
  * VELORA ESTATES - Property Discovery & Filter Controller
- * Real-time filter & sort engine with zero page reloads
+ * Real-time filter & sort engine with zero page reloads (USD $ exclusive)
  */
 
 let currentFilteredProperties = [...PROPERTIES_DATA];
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initFilterControls() {
-  const filterForm = document.getElementById('property-filter-form');
   const heroSearchBtn = document.getElementById('hero-search-btn');
   const sortSelect = document.getElementById('property-sort-select');
   const clearFilterBtn = document.getElementById('clear-filters-btn');
@@ -27,9 +26,9 @@ function initFilterControls() {
     maxPriceInput.addEventListener('input', (e) => {
       const val = parseFloat(e.target.value);
       if (val >= 15) {
-        priceValueDisplay.textContent = "₹15 Cr+";
+        priceValueDisplay.textContent = "$15M+";
       } else {
-        priceValueDisplay.textContent = `Up to ₹${val} Cr`;
+        priceValueDisplay.textContent = `Up to $${val.toFixed(1)}M`;
       }
       applyFilters();
     });
@@ -102,9 +101,9 @@ function applyFilters() {
       const minBeds = parseInt(bedrooms, 10);
       if (prop.bedrooms < minBeds) return false;
     }
-    // Max Price Filter (in Cr)
+    // Max Price Filter (in Millions USD)
     if (maxPrice < 15) {
-      const maxPriceVal = maxPrice * 10000000;
+      const maxPriceVal = maxPrice * 1000000;
       if (prop.priceValue > maxPriceVal) return false;
     }
     return true;
@@ -134,7 +133,6 @@ function sortProperties(list, sortBy) {
       break;
     case 'recommended':
     default:
-      // Featured/Signature first
       list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
       break;
   }
@@ -154,7 +152,7 @@ function resetFilters() {
   if (bedroomsSelect) bedroomsSelect.value = 'any';
   if (statusSelect) statusSelect.value = 'all';
   if (maxPriceInput) maxPriceInput.value = 15;
-  if (priceValueDisplay) priceValueDisplay.textContent = '₹15 Cr+';
+  if (priceValueDisplay) priceValueDisplay.textContent = '$15M+';
   if (sortSelect) sortSelect.value = 'recommended';
 
   applyFilters();
