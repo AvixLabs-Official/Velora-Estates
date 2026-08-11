@@ -243,3 +243,179 @@
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   ULTRA-SMALL MOBILE SCREENS (320px - 400px)
+   ========================================================================== */
+@media (max-width: 400px) {
+  /* 1. Residences Found Section Ultra-Small Optimization */
+  .hero-search-box, .filter-bar {
+    padding: 16px 12px !important;
+  }
+
+  .results-meta-bar {
+    margin-bottom: 16px !important;
+    padding-bottom: 10px !important;
+    gap: 10px !important;
+  }
+
+  .property-count {
+    font-size: 0.78rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .results-sort-wrap {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .results-sort-wrap label {
+    font-size: 0.7rem !important;
+  }
+
+  #property-sort-select {
+    width: 100% !important;
+    padding: 10px 30px 10px 10px !important;
+    font-size: 0.8rem !important;
+    background-position: right 10px center !important;
+    background-size: 12px !important;
+  }
+
+  .properties-grid {
+    gap: 18px !important;
+  }
+
+  .property-card .card-body {
+    padding: 16px 12px !important;
+  }
+
+  .card-meta-top {
+    font-size: 0.7rem !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .card-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 6px !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+  }
+
+  .card-price {
+    font-size: 1.25rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .card-specs {
+    flex-wrap: wrap !important;
+    gap: 6px 10px !important;
+    font-size: 0.78rem !important;
+    padding-top: 12px !important;
+  }
+
+  .spec-divider {
+    display: none !important;
+  }
+
+  .card-badge {
+    top: 10px !important;
+    left: 10px !important;
+    padding: 4px 8px !important;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .favorite-btn {
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .favorite-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* 2. Sell Your Property Section Ultra-Small Optimization */
+  .seller-section {
+    padding: 40px 0 !important;
+  }
+
+  .seller-grid {
+    gap: 20px !important;
+  }
+
+  .seller-headline {
+    font-size: 1.45rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+
+  .seller-subpara {
+    font-size: 0.88rem !important;
+    margin-top: 8px !important;
+    margin-bottom: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .seller-bullets-wrap {
+    gap: 10px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .seller-bullet-item {
+    gap: 8px !important;
+  }
+
+  .bullet-check {
+    font-size: 0.85rem !important;
+  }
+
+  /* 3. Request Property Valuation Section Ultra-Small Optimization */
+  .seller-form-box {
+    padding: 16px 12px !important;
+    border-radius: var(--radius-sm) !important;
+    margin-top: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .seller-form-box h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 14px !important;
+    text-align: left !important;
+  }
+
+  .seller-form-box .form-grid {
+    gap: 10px !important;
+  }
+
+  .seller-form-box .form-control {
+    font-size: 16px !important;
+    padding: 10px 28px 10px 10px !important;
+    min-height: 44px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background-position: right 10px center !important;
+    background-size: 12px !important;
+  }
+
+  .seller-form-box textarea.form-control {
+    padding: 10px !important;
+    min-height: 70px !important;
+  }
+
+  .seller-form-box .btn-full {
+    width: 100% !important;
+    padding: 12px 12px !important;
+    font-size: 0.82rem !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+  }
+}
