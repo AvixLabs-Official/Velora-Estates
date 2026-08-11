@@ -1,11 +1,18 @@
 /* ==========================================================================
-   VELORA ESTATES - Ultra-Responsive Master Stylesheet
-   Complete Mobile & Responsive Reflow for All Sections
-   Targeting: 1440px, 1200px, 992px, 768px, 600px, 480px, 400px, 350px, 250px
+   VELORA ESTATES - Master Ultra-Responsive Stylesheet
+   Strict Design System Alignment Across All Breakpoints (1920px -> 250px)
    ========================================================================== */
 
 /* Large Tablets & Small Laptops (993px - 1200px) */
 @media (max-width: 1200px) {
+  :root {
+    --section-padding-desktop: 80px;
+  }
+
+  .container {
+    padding: 0 28px;
+  }
+
   .properties-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
@@ -18,7 +25,7 @@
 
   .principles-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
   }
 
   .advisors-grid {
@@ -32,13 +39,21 @@
   }
 
   .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 36px;
   }
 }
 
-/* Medium Tablets & Mobile Landscape (769px - 992px) */
+/* Medium Tablets & Landscape (769px - 992px) */
 @media (max-width: 992px) {
+  :root {
+    --section-padding-desktop: 70px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
   .nav-links, .nav-actions .btn {
     display: none;
   }
@@ -71,7 +86,7 @@
 
   .calc-box {
     grid-template-columns: 1fr;
-    padding: 32px 24px;
+    padding: 36px 28px;
     gap: 32px;
   }
 
@@ -98,16 +113,36 @@
   .sidebar-agent-card {
     position: static;
   }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
 }
 
 /* Small Tablets & Mobile Portrait (481px - 768px) */
 @media (max-width: 768px) {
+  :root {
+    --section-padding-desktop: 56px;
+  }
+
   .container {
     padding: 0 20px;
   }
 
   .section-padding {
-    padding: 60px 0 !important;
+    padding: 56px 0 !important;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .section-header-centered {
+    margin-bottom: 28px;
   }
 
   /* Header Bar */
@@ -125,16 +160,17 @@
 
   /* Hero Section */
   .hero {
-    padding: 90px 0 40px;
+    padding: 86px 0 40px;
   }
 
   .hero-headline {
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.15;
     word-break: break-word;
+    margin-bottom: 16px;
   }
 
-  .hero-subheading {
+  .hero-description {
     font-size: 0.98rem;
     margin-bottom: 24px;
   }
@@ -165,6 +201,11 @@
     gap: 14px;
   }
 
+  .filter-bar {
+    padding: 20px 16px;
+    margin-bottom: 28px;
+  }
+
   .filter-bar-grid {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -174,7 +215,7 @@
   .results-meta-bar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 24px;
     padding-bottom: 12px;
   }
@@ -197,7 +238,7 @@
 
   /* Signature Estate Section */
   .signature-section {
-    padding: 60px 0;
+    padding: 56px 0 !important;
   }
 
   .signature-img-wrapper {
@@ -207,17 +248,25 @@
   .signature-content h2 {
     font-size: 1.8rem;
     line-height: 1.2;
+    margin-bottom: 12px;
   }
 
   .signature-price {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+
+  .signature-desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
 
   .signature-specs-row {
     grid-template-columns: repeat(2, 1fr);
+    display: grid;
     gap: 16px;
     margin-bottom: 24px;
+    padding: 18px 0;
   }
 
   .signature-content .btn {
@@ -238,12 +287,13 @@
   }
 
   .principle-card {
-    padding: 20px 16px;
+    padding: 24px 20px;
   }
 
   /* Calculator Section */
   .calc-box {
     padding: 24px 16px;
+    gap: 28px;
   }
 
   .calc-res-grid {
@@ -270,51 +320,56 @@
     aspect-ratio: 16/10;
   }
 
+  .advisor-body {
+    padding: 20px 16px;
+  }
+
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .testimonial-card {
-    padding: 20px 16px;
+    padding: 24px 20px;
   }
 
   /* Sell Your Property Section */
   .seller-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 
   .seller-headline {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
+    line-height: 1.15;
   }
 
   .seller-subpara {
-    font-size: 0.98rem;
-    margin-top: 14px;
-    margin-bottom: 24px;
+    font-size: 0.95rem;
+    margin-top: 12px;
+    margin-bottom: 20px;
   }
 
   .seller-bullets-wrap {
-    gap: 14px;
-    font-size: 0.9rem;
+    gap: 12px;
+    font-size: 0.88rem;
   }
 
   .seller-form-box {
-    padding: 28px 20px !important;
+    padding: 24px 18px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
 
   .valuation-form-title {
-    font-size: 1.35rem !important;
-    margin-bottom: 18px !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 16px !important;
   }
 
   .form-grid {
     grid-template-columns: 1fr !important;
-    gap: 14px !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
@@ -326,7 +381,7 @@
 
   .seller-form-box .form-control {
     font-size: 16px !important; /* Prevents iOS auto-zoom */
-    padding: 12px 16px !important;
+    padding: 12px 14px !important;
     min-height: 48px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -346,7 +401,7 @@
   .seller-form-box .btn-full {
     width: 100% !important;
     padding: 14px 18px !important;
-    font-size: 0.88rem !important;
+    font-size: 0.85rem !important;
     white-space: normal !important;
     word-break: break-word !important;
     text-align: center !important;
@@ -354,49 +409,55 @@
   }
 
   /* Footer */
+  .footer {
+    padding: 56px 0 28px;
+  }
+
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     text-align: center;
   }
 
-  /* Property Detail Modal & Dedicated Page */
+  /* Property Detail Modal */
   .property-modal {
     padding: 16px 10px;
   }
 
   .detail-container {
-    padding: 24px 16px;
+    padding: 20px 16px;
   }
 
   .detail-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .detail-price-hero {
-    font-size: 2rem;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
   }
 
   .detail-quick-specs {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    padding: 18px 14px;
+    gap: 12px;
+    padding: 16px 12px;
   }
 
   .amenities-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .sidebar-agent-card {
-    padding: 24px 16px;
+    padding: 20px 16px;
   }
 }
 
@@ -407,16 +468,20 @@
   }
 
   .section-padding {
-    padding: 48px 0 !important;
+    padding: 44px 0 !important;
   }
 
-  /* Header & Navigation */
+  /* Header Bar */
   .header.scrolled {
-    height: 58px;
+    height: 56px;
   }
 
   .brand-name {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+  }
+
+  .brand-tag {
+    font-size: 0.52rem;
   }
 
   .location-grid {
@@ -426,28 +491,32 @@
 
   /* Property Card */
   .card-body {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
   .card-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .card-price {
-    font-size: 1.35rem;
-    margin-bottom: 12px;
+    font-size: 1.28rem;
+    margin-bottom: 10px;
   }
 
   .card-specs {
     flex-wrap: wrap;
     gap: 6px 10px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .spec-divider {
+    display: none;
   }
 
   /* Signature & Calculator */
   .signature-specs-row {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .calc-group-header {
@@ -462,30 +531,28 @@
 
   /* Sell & Valuation Form */
   .seller-headline {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
   }
 
   .seller-form-box {
-    padding: 20px 14px;
-    border-radius: var(--radius-sm);
+    padding: 18px 14px !important;
   }
 
+  .valuation-form-title,
   .seller-form-box h3 {
-    font-size: 1.25rem;
-    margin-bottom: 18px;
+    font-size: 1.2rem !important;
+    margin-bottom: 14px !important;
   }
 
   .seller-form-box .form-control {
-    font-size: 16px !important;
-    padding: 12px 14px;
-    min-height: 48px;
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+    min-height: 44px !important;
   }
 
   .seller-form-box .btn-full {
-    width: 100%;
-    padding: 14px 18px;
-    font-size: 0.88rem;
-    justify-content: center;
+    padding: 12px 14px !important;
+    font-size: 0.82rem !important;
   }
 
   /* Property Detail Specs */
@@ -503,12 +570,12 @@
 
   /* Hero Section */
   .hero-headline {
-    font-size: 1.75rem !important;
+    font-size: 1.65rem !important;
     line-height: 1.2 !important;
   }
 
   .hero-search-box, .filter-bar {
-    padding: 16px 12px !important;
+    padding: 14px 12px !important;
   }
 
   .results-meta-bar {
@@ -546,7 +613,7 @@
   }
 
   .property-card .card-body {
-    padding: 16px 12px !important;
+    padding: 14px 12px !important;
   }
 
   .card-meta-top {
@@ -556,26 +623,22 @@
   }
 
   .card-title {
-    font-size: 1.15rem !important;
+    font-size: 1.12rem !important;
     margin-bottom: 6px !important;
     line-height: 1.25 !important;
     word-break: break-word !important;
   }
 
   .card-price {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
     margin-bottom: 10px !important;
   }
 
   .card-specs {
     flex-wrap: wrap !important;
     gap: 6px 10px !important;
-    font-size: 0.78rem !important;
-    padding-top: 12px !important;
-  }
-
-  .spec-divider {
-    display: none !important;
+    font-size: 0.76rem !important;
+    padding-top: 10px !important;
   }
 
   .card-badge {
@@ -594,13 +657,13 @@
   }
 
   .favorite-btn svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 15px !important;
+    height: 15px !important;
   }
 
   /* Sell & Valuation Section */
   .seller-section {
-    padding: 40px 0 !important;
+    padding: 36px 0 !important;
   }
 
   .seller-grid {
@@ -608,7 +671,7 @@
   }
 
   .seller-headline {
-    font-size: 1.45rem !important;
+    font-size: 1.4rem !important;
     line-height: 1.2 !important;
     word-break: break-word !important;
   }
@@ -629,10 +692,6 @@
     gap: 8px !important;
   }
 
-  .bullet-check {
-    font-size: 0.85rem !important;
-  }
-
   .seller-form-box {
     padding: 16px 12px !important;
     border-radius: var(--radius-sm) !important;
@@ -640,9 +699,10 @@
     box-sizing: border-box !important;
   }
 
+  .valuation-form-title,
   .seller-form-box h3 {
-    font-size: 1.15rem !important;
-    margin-bottom: 14px !important;
+    font-size: 1.12rem !important;
+    margin-bottom: 12px !important;
     text-align: left !important;
   }
 
@@ -651,9 +711,9 @@
   }
 
   .seller-form-box .form-control {
-    font-size: 16px !important;
-    padding: 10px 28px 10px 10px !important;
-    min-height: 44px !important;
+    font-size: 14px !important;
+    padding: 10px 24px 10px 10px !important;
+    min-height: 42px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     background-position: right 10px center !important;
@@ -662,13 +722,13 @@
 
   .seller-form-box textarea.form-control {
     padding: 10px !important;
-    min-height: 70px !important;
+    min-height: 68px !important;
   }
 
   .seller-form-box .btn-full {
     width: 100% !important;
     padding: 12px 12px !important;
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
     justify-content: center !important;
     box-sizing: border-box !important;
     white-space: normal !important;
@@ -677,35 +737,33 @@
   }
 }
 
-/* ==========================================================================
-   MICRO-MOBILE VIEWPORTS (250px - 350px Width)
-   ========================================================================== */
+/* Micro-Mobile Viewports (250px - 350px) */
 @media (max-width: 350px) {
   .container {
-    padding: 0 8px !important;
+    padding: 0 10px !important;
   }
 
   .section-padding {
     padding: 32px 0 !important;
   }
 
-  /* Header & Navigation */
+  /* Header Bar */
   .brand-name {
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     letter-spacing: 0.08em !important;
   }
 
   .brand-tag {
-    font-size: 0.48rem !important;
+    font-size: 0.46rem !important;
   }
 
   .hero-headline {
-    font-size: 1.5rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.2 !important;
   }
 
-  .hero-subheading {
-    font-size: 0.88rem !important;
+  .hero-description {
+    font-size: 0.85rem !important;
   }
 
   /* Residences Found Section */
@@ -757,14 +815,14 @@
   }
 
   .card-title {
-    font-size: 1.05rem !important;
+    font-size: 1.02rem !important;
     margin-bottom: 4px !important;
     line-height: 1.2 !important;
     word-break: break-word !important;
   }
 
   .card-price {
-    font-size: 1.15rem !important;
+    font-size: 1.12rem !important;
     margin-bottom: 8px !important;
   }
 
@@ -773,10 +831,6 @@
     gap: 4px 6px !important;
     font-size: 0.72rem !important;
     padding-top: 8px !important;
-  }
-
-  .spec-divider {
-    display: none !important;
   }
 
   .card-badge {
@@ -806,36 +860,36 @@
 
   /* Signature & Location Section */
   .signature-content h2 {
-    font-size: 1.4rem !important;
+    font-size: 1.35rem !important;
   }
 
   .signature-price {
-    font-size: 1.4rem !important;
+    font-size: 1.35rem !important;
   }
 
   .sig-spec-val {
-    font-size: 0.95rem !important;
+    font-size: 0.92rem !important;
   }
 
   .sig-spec-lbl {
-    font-size: 0.65rem !important;
+    font-size: 0.62rem !important;
   }
 
   .location-name {
-    font-size: 1.1rem !important;
+    font-size: 1.05rem !important;
   }
 
   .location-count {
-    font-size: 0.72rem !important;
+    font-size: 0.7rem !important;
   }
 
   /* Principles & Calculator */
   .principle-title {
-    font-size: 1rem !important;
+    font-size: 0.98rem !important;
   }
 
   .calc-res-val-lg {
-    font-size: 1.4rem !important;
+    font-size: 1.35rem !important;
   }
 
   /* Sell Your Property Section */
@@ -848,7 +902,7 @@
   }
 
   .seller-headline {
-    font-size: 1.2rem !important;
+    font-size: 1.18rem !important;
     line-height: 1.2 !important;
     word-break: break-word !important;
     letter-spacing: 0 !important;
@@ -883,9 +937,9 @@
     box-sizing: border-box !important;
   }
 
-  .seller-form-box h3,
-  .valuation-form-title {
-    font-size: 1.02rem !important;
+  .valuation-form-title,
+  .seller-form-box h3 {
+    font-size: 1rem !important;
     margin-bottom: 10px !important;
     text-align: left !important;
     letter-spacing: 0 !important;
@@ -899,7 +953,7 @@
 
   .seller-form-box .form-control {
     font-size: 14px !important;
-    padding: 8px 22px 8px 8px !important;
+    padding: 8px 20px 8px 8px !important;
     min-height: 40px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -916,7 +970,7 @@
   .seller-form-box .btn-full {
     width: 100% !important;
     padding: 10px 8px !important;
-    font-size: 0.78rem !important;
+    font-size: 0.76rem !important;
     justify-content: center !important;
     box-sizing: border-box !important;
     white-space: normal !important;
@@ -935,11 +989,11 @@
   }
 
   .detail-title {
-    font-size: 1.3rem !important;
+    font-size: 1.25rem !important;
   }
 
   .detail-price-hero {
-    font-size: 1.4rem !important;
+    font-size: 1.35rem !important;
     margin-bottom: 16px !important;
     padding-bottom: 12px !important;
   }
