@@ -1,6 +1,6 @@
 /* ==========================================================================
    VELORA ESTATES - Master Mobile-Native UI & Responsive Engine
-   Bespoke Mobile App Experience with Floating Dock & Touch Sliders (≤768px)
+   Strict Galaxy Z Fold 5 & Micro-Mobile Viewport Fixes (1920px -> 250px)
    ========================================================================== */
 
 /* Global Reset & Zero Horizontal Overflow Lock */
@@ -100,7 +100,9 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
   }
 
   .hero-badge-float {
-    position: static;
+    position: relative;
+    bottom: auto;
+    left: auto;
     margin-top: 16px;
     max-width: 100%;
     box-sizing: border-box;
@@ -148,7 +150,7 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
 }
 
 /* ==========================================================================
-   MOBILE NATIVE APP EXPERIENCE (≤768px)
+   MOBILE NATIVE APP EXPERIENCE & GALAXY Z FOLD 5 FIXES (≤768px)
    ========================================================================== */
 @media (max-width: 768px) {
   :root {
@@ -209,7 +211,7 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
   }
 
   .hero-headline {
-    font-size: clamp(1.65rem, 5.5vw, 2.5rem) !important;
+    font-size: clamp(1.55rem, 5.5vw, 2.4rem) !important;
     line-height: 1.15 !important;
     margin-bottom: 12px;
   }
@@ -232,10 +234,36 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
     min-height: 48px;
   }
 
+  .hero-visual {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .hero-img-wrapper {
-    aspect-ratio: 16/10;
-    width: 100%;
-    border-radius: var(--radius-sm);
+    aspect-ratio: 16/10 !important;
+    width: 100% !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .hero-badge-float {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin-top: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background-color: var(--bg-dark) !important;
+    color: var(--text-light) !important;
+    padding: 14px 16px !important;
+    border-radius: var(--radius-sm) !important;
+    border-left: 3px solid var(--color-accent) !important;
   }
 
   .hero-search-box {
@@ -407,9 +435,9 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
   }
 
   .location-card, .advisor-card, .testimonial-card {
-    flex: 0 0 82% !important;
-    min-width: 82% !important;
-    max-width: 82% !important;
+    flex: 0 0 84% !important;
+    min-width: 84% !important;
+    max-width: 84% !important;
     scroll-snap-align: center !important;
     box-sizing: border-box !important;
   }
@@ -599,8 +627,8 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
   }
 }
 
-/* Phones & Micro-Screens (250px - 400px) */
-@media (max-width: 400px) {
+/* Galaxy Z Fold 5 Outer Screen & Micro Viewports (250px - 360px) */
+@media (max-width: 360px) {
   .location-card, .advisor-card, .testimonial-card {
     flex: 0 0 88% !important;
     min-width: 88% !important;
@@ -608,11 +636,11 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
   }
 
   .hero-headline {
-    font-size: 1.45rem !important;
+    font-size: 1.4rem !important;
   }
 
   .seller-headline {
-    font-size: 1.18rem !important;
+    font-size: 1.15rem !important;
   }
 
   .seller-form-box {
@@ -621,12 +649,17 @@ h1, h2, h3, h4, .hero-headline, .seller-headline, .signature-content h2, .valuat
 
   .valuation-form-title,
   .seller-form-box h3 {
-    font-size: 1rem !important;
+    font-size: 0.98rem !important;
   }
 
   .seller-form-box .form-control {
     font-size: 14px !important;
     padding: 10px 10px !important;
     min-height: 42px !important;
+  }
+
+  .hero-badge-float {
+    padding: 10px 12px !important;
+    font-size: 0.8rem !important;
   }
 }
