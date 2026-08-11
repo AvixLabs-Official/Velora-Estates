@@ -549,21 +549,21 @@
         </div>
 
         <div class="seller-form-box reveal-on-scroll">
-          <h3 style="color:var(--text-light); margin-bottom:24px;">Request Property Valuation</h3>
+          <h3 class="valuation-form-title">Request Property Valuation</h3>
           <form id="valuation-enquiry-form" class="form-grid">
-            <div>
+            <div class="form-field-wrap">
               <input type="text" name="name" placeholder="Full Name" class="form-control" required>
             </div>
-            <div>
+            <div class="form-field-wrap">
               <input type="email" name="email" placeholder="Email Address" class="form-control" required>
             </div>
-            <div>
+            <div class="form-field-wrap">
               <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required>
             </div>
-            <div>
-              <input type="text" name="location" placeholder="Property Location (e.g. Alipore)" class="form-control" required>
+            <div class="form-field-wrap">
+              <input type="text" name="location" placeholder="Property Location" class="form-control" required>
             </div>
-            <div class="form-full">
+            <div class="form-field-wrap form-full">
               <select name="type" class="form-control" required>
                 <option value="" disabled selected>Select Property Type</option>
                 <option value="villa">Luxury Villa</option>
@@ -572,10 +572,10 @@
                 <option value="land">Prime Plot / Estate</option>
               </select>
             </div>
-            <div class="form-full">
+            <div class="form-field-wrap form-full">
               <textarea name="message" placeholder="Additional details about your property..." rows="3" class="form-control"></textarea>
             </div>
-            <div class="form-full">
+            <div class="form-field-wrap form-full">
               <button type="submit" class="btn btn-accent btn-full">Submit Valuation Request →</button>
             </div>
           </form>
